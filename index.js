@@ -1,7 +1,6 @@
 var tsc = require('typescript-compiler');
 
 var TypescriptCompiler = function (config) {
-  // TODO: support for compiler options
   if (config && config.plugins) {
     this.config = config.plugins.Typescript;
   } else {

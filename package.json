@@ -15,5 +15,10 @@
   },
   "devDependencies": {
     "mocha": "2.2.4"
-  }
+  },
+  "keywords": [
+    "brunch",
+    "typescript",
+    "plugin"
+  ]
 }
