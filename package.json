@@ -1,0 +1,12 @@
+{
+  "name": "brunch-typescript-support",
+  "version": "0.0.1",
+  "description": "Typescript compiler plugin for brunch",
+  "author": "Peter Braun",
+  "dependencies": {
+    "typescript-compiler": "1.4.1-2"
+  },
+  "devDependencies": {
+    "mocha": "2.2.4"
+  }
+}
