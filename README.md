@@ -11,9 +11,9 @@ npm install --save typescript-support-brunch
 
 Configuration:
 
-```coffeescript
 You can set compiler options by using the `tscArgs` property.
 
+```coffeescript
 plugins:
   Typescript:
     tscArgs: "--module commonjs"
