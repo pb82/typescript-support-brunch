@@ -9,11 +9,12 @@ TypescriptCompiler.prototype.type = 'javascript';
 TypescriptCompiler.prototype.extension = "ts";
 
 TypescriptCompiler.prototype.compile = function (data, path, callback) {
-  try {
-    var compiled = tsc.compileString(data);
+  var compiled = tsc.compileString(data, null, null, function (error) {
+    callback(error.formattedMessage);
+  });
+
+  if (compiled) {
     callback(null, {data: compiled});
-  } catch (error) {
-    callback(error);
   }
 };
 
