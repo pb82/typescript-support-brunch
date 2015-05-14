@@ -6,7 +6,7 @@ var TypescriptCompiler = function (config) {
 
 TypescriptCompiler.prototype.brunchPlugin = true;
 TypescriptCompiler.prototype.type = 'javascript';
-TypescriptCompiler.extension = "ts";
+TypescriptCompiler.prototype.extension = "ts";
 
 TypescriptCompiler.prototype.compile = function (data, path, callback) {
   try {
