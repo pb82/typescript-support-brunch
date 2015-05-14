@@ -1,8 +1,15 @@
 {
   "name": "brunch-typescript-support",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pb82/brunch-typescript-support.git"
+  },
   "description": "Typescript compiler plugin for brunch",
   "author": "Peter Braun",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
   "dependencies": {
     "typescript-compiler": "1.4.1-2"
   },
