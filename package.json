@@ -1,9 +1,9 @@
 {
-  "name": "brunch-typescript-support",
+  "name": "typescript-support-brunch",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pb82/brunch-typescript-support.git"
+    "url": "https://github.com/pb82/typescript-support-brunch.git"
   },
   "description": "Typescript compiler plugin for brunch",
   "author": "Peter Braun",
