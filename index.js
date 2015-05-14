@@ -10,12 +10,10 @@ TypescriptCompiler.prototype.extension = "ts";
 
 TypescriptCompiler.prototype.compile = function (data, path, callback) {
   var compiled = tsc.compileString(data, null, null, function (error) {
-    callback(error.formattedMessage);
+    return callback(error.formattedMessage);
   });
 
-  if (compiled) {
-    callback(null, {data: compiled});
-  }
+  return callback(null, {data: compiled});
 };
 
 module.exports = TypescriptCompiler;
