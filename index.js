@@ -1,7 +1,7 @@
 var tsc = require('typescript-compiler');
 
 var TypescriptCompiler = function (config) {
-  if (config && config.plugins) {
+  if (config && config.plugins && config.plugins.Typescript) {
     this.config = config.plugins.Typescript;
   } else {
     this.config = {};
