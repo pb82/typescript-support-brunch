@@ -13,13 +13,18 @@ TypescriptCompiler.prototype.type = 'javascript';
 TypescriptCompiler.prototype.extension = "ts";
 
 TypescriptCompiler.prototype.compile = function (data, path, callback) {
+ var errors = [];
+
   var compiled = tsc.compileString(data, this.config.tscArgs, null, function (error) {
-    callback(error.formattedMessage);
+    /*
+      because of brunch inlining source code one by one
+      tsc could not found external module (hope your editor manage this ;)
+     */
+    if(error.code != 2307)
+       errors.push(error.formattedMessage);
   });
 
-  if (compiled) {
-    return callback(null, {data: compiled});
-  }
+  return callback(errors.length >0 ? errors : null , compiled ? {data: compiled} : null);
 };
 
 module.exports = TypescriptCompiler;
