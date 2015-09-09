@@ -16,15 +16,16 @@ TypescriptCompiler.prototype.compile = function (data, path, callback) {
  var errors = [];
 
   var compiled = tsc.compileString(data, this.config.tscArgs, null, function (error) {
-    /*
-      because of brunch inlining source code one by one
-      tsc could not found external module (hope your editor manage this ;)
+    /**
+     * because of brunch inlining source code one by one
+     * tsc could not found external module (hope your editor manage this ;)
      */
-    if(error.code != 2307)
+    if(error.code != 2307) {
        errors.push(error.formattedMessage);
+    }
   });
 
-  return callback(errors.length >0 ? errors : null , compiled ? {data: compiled} : null);
+  return callback(errors.length > 0 ? errors : null , compiled ? { data: compiled } : null);
 };
 
 module.exports = TypescriptCompiler;
